@@ -5,6 +5,7 @@ import config from "../../services/config.json";
 import AppCart from "../AppCart/AppCart";
 import { HomeFilled } from "@ant-design/icons";
 import { Menu } from "antd";
+import { Link } from "react-router-dom";
 
 function AppHeader() {
   const [cartItems, setCartItems] = useState([]);
@@ -29,33 +30,18 @@ function AppHeader() {
           </div>
         </div>
         <div className="right">
-          {/* <Link to="/home"><div className="menuitems">HOME</div></Link>
-          <div className="menuitems">REGISTER</div>
-          <div className="menuitems">SIGN IN</div> */}
-          <Menu
-            className="appMenu"
-            mode="horizontal"
-            items={[
-              {
-                label: <HomeFilled />,
-                key: "",
-              },
-              {
-                label: "Sign In",
-                key: "signin",
-              },
-              {
-                label: "Sign Up",
-                key: "signup",
-              },
-            ]}
-          />
+          <Menu className="appMenu" mode="horizontal">
+            <Menu.Item key="home" icon={<HomeFilled />}>
+              <Link to="/"></Link>
+            </Menu.Item>
+            {/* <Menu.Item key="signin">
+              <Link to="/signin">Sign In</Link>
+            </Menu.Item>
+            <Menu.Item key="signup">
+              <Link to="/signup">Sign Up</Link>
+            </Menu.Item> */}
+          </Menu>
           <div className="menuitems">
-            {/* <Link to="/cart">
-          <StyledBadge badgeContent={cartItems.length} color="secondary">
-              <ShoppingCartIcon />
-            </StyledBadge>
-            </Link> */}
             <AppCart />
           </div>
         </div>

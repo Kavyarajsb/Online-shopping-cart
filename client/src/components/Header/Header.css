@@ -1,3 +1,4 @@
+
 .container1 {
   height: 80px;
   background-color: white;
@@ -52,7 +53,21 @@
 
 .appMenu{
   border: none;
-  width: 230px;
+  width: 60px;
   font-size: 18px;
 }
+.appMenu1{
+  border: none;
+  width: 200px;
+  font-size: 18px;
+}
+
+.mainbg{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  height: 670px;
+}
+
 

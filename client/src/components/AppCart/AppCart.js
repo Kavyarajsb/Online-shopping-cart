@@ -102,7 +102,7 @@ function AppCart() {
                       const itemIndex = cartItems.findIndex((item) => item.product_id === record.product_id);
                       const updatedCartItems = [...cartItems];
                       updatedCartItems[itemIndex].quantity = newQuantity;
-
+                      // updatedCartItems[itemIndex].total = updatedCartItems[itemIndex].price * newQuantity;
             
                       updateItem(record.product_id, "update", newQuantity);
                       setCartItems(updatedCartItems);
