@@ -32,7 +32,7 @@ function AppHeader() {
         <div className="right">
           <Menu className="appMenu" mode="horizontal">
             <Menu.Item key="home" icon={<HomeFilled />}>
-              <Link to="/"></Link>
+              <Link to="/home"></Link>
             </Menu.Item>
             {/* <Menu.Item key="signin">
               <Link to="/signin">Sign In</Link>

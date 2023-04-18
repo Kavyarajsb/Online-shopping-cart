@@ -4,9 +4,12 @@ import * as antd from "antd";
 import axios from "axios";
 import config from "../../services/config.json";
 import { Modal } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate} from "react-router-dom";
 
-const SignIn = () => {
+
+
+const SignIn = ({children}) => {
+
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
@@ -23,7 +26,8 @@ const SignIn = () => {
         Modal.success({
           content: `User has been successfully logged in!`,
           onOk: () => {
-            navigate("/home");
+            navigate("/signin/home")
+            
           },
         });
       } else {
