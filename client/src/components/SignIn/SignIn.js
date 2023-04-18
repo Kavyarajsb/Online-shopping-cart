@@ -8,7 +8,7 @@ import { Outlet, useNavigate} from "react-router-dom";
 
 
 
-const SignIn = ({children}) => {
+const SignIn = () => {
 
   const navigate = useNavigate();
 
