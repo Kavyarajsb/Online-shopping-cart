@@ -1,28 +1,34 @@
 import Home from "./pages/Home";
-import {Route,Routes, Outlet, useRoutes } from "react-router-dom"
+import { Outlet, useRoutes } from "react-router-dom"
 import AppCart from "./components/AppCart/AppCart";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Main from "./pages/Main";
-import { AuthProvider } from "./components/AuthProvider";
-
+import MainLayout from "./components/MainLayout"
+import AuthProtect from "./components/AuthProtect";
 
 
 function App() {
-  return(
-  
-   <div>
-    <AuthProvider>
-      <Routes>
-      <Route path="/" element={<Main/>}/>
-      <Route exact path="signin" element={<SignIn/>}>
-      <Route path="home" element={<Home />}/>
-      <Route path="cart" element={<AppCart />} />
-      </Route>      
-      </Routes>
-      </AuthProvider>
-   </div>
-  )
+  return useRoutes([
+    {
+      path: "/",
+      element: (
+          <AuthProtect>
+            <MainLayout>
+                <Outlet />
+            </MainLayout>
+          </AuthProtect>
+      ),
+      children: [
+        { path: "/", element: <Main /> },
+        // { path: "signin", element: <SignIn /> },
+        { path: "home", element: <Home /> },
+        { path: "cart", element: <AppCart /> },
+        { path: "signup", element: <SignUp /> }
+      ],
+    },
+    { path: "signin", element: <SignIn /> },
+  ]);
 }
   
 

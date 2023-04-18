@@ -8,7 +8,8 @@ import { Outlet, useNavigate} from "react-router-dom";
 
 
 
-const SignIn = ({children}) => {
+
+const SignIn = () => {
 
   const navigate = useNavigate();
 
@@ -26,8 +27,7 @@ const SignIn = ({children}) => {
         Modal.success({
           content: `User has been successfully logged in!`,
           onOk: () => {
-            navigate("/signin/home")
-            
+            navigate("/home") 
           },
         });
       } else {
