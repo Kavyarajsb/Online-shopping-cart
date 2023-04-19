@@ -5,8 +5,6 @@ const {
   getCartItems,
   addItem,
   deleteItem,
-  increaseItemQuantity,
-  decreaseItemQuantity,
   updateItem
 } = require("../controllers/controllerCart");
 

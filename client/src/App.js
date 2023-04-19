@@ -23,8 +23,7 @@ function App() {
         { path: "/", element: <Main /> },
         // { path: "signin", element: <SignIn /> },
         { path: "home", element: <Home /> },
-        { path: "cart", element: <AppCart /> },
-        { path: "signup", element: <SignUp /> }
+        { path: "cart", element: <AppCart /> }
       ],
     },
     { path: "signin", element: <SignIn /> },

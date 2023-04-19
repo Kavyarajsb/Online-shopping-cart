@@ -3,6 +3,7 @@ import axios from "axios";
 import config from "../../services/config.json";
 import { Button, message, Modal } from "antd";
 import "./Product.css";
+import Product from '../../Images/products/product.png'
 
 
 function Products() {
@@ -45,8 +46,8 @@ function Products() {
         <div className="card" key={item.id}>
           <img
             style={{ marginLeft: "20%", marginTop: "10%", marginRight: "20%" }}
-            src="https://img101.urbanic.com/v1/goods-pic/bfda5444407546d9b1a9ff68a3622041UR_w1000_q90.webp"
-            alt="product"
+            src={Product}
+            alt={item.title}
           />
           <div className="card-content" style={{ alignContent: "center" }}>
             <h3>{item.name}</h3>

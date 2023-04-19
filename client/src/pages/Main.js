@@ -23,7 +23,7 @@ import image from '../Images/Main.png'
               <Link to="/signin">Sign In</Link>
             </Menu.Item>
             <Menu.Item key="signup">
-              <Link to="/signup">Sign Up</Link>
+              <Link to="">Sign Up</Link>
             </Menu.Item>
           </Menu>
         </div>

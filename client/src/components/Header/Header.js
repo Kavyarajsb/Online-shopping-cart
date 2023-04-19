@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function AppHeader() {
   const [cartItems, setCartItems] = useState([]);
 
+
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
@@ -34,15 +35,9 @@ function AppHeader() {
             <Menu.Item key="home" icon={<HomeFilled />}>
               <Link to="/home"></Link>
             </Menu.Item>
-            {/* <Menu.Item key="signin">
-              <Link to="/signin">Sign In</Link>
-            </Menu.Item>
-            <Menu.Item key="signup">
-              <Link to="/signup">Sign Up</Link>
-            </Menu.Item> */}
           </Menu>
           <div className="menuitems">
-            <AppCart />
+            <AppCart/>
           </div>
         </div>
       </div>
