@@ -2,8 +2,9 @@ import { Navigate } from "react-router-dom";
 
 
 function AuthProtect(props) {
-  if (props.isAuth) {
-    return <Navigate to="/home" />;
+  const isAuth = sessionStorage.getItem("isAuth") === "true";
+  if ( isAuth) {
+    return <Navigate to="/signin" />;
   }
   return props.children;
 }

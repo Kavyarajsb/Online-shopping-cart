@@ -6,9 +6,9 @@ import AppFooter from '../components/Footer/Footer';
 import image from '../Images/Main.png'
 
 
-
-
  function Main() {
+
+  
   return (
     <div className="container1">
       <div className="Wrapper">

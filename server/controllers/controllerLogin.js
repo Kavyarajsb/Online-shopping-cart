@@ -26,7 +26,7 @@ const login = async (req,res)=>{
 
 const loginsession = async (req,res)=>{
   if (req.session.user){
-    req.send({loggedIn: true, user: req.session.user})
+    res.send({loggedIn: true, user: req.session.user})
   } else{
     res.send({loggedIn: false})
   }
